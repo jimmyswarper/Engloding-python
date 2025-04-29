@@ -1,8 +1,8 @@
 # engloding-python/translator.py
 
-import openai
+import os
 
-openai.api_key = "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"
+openai.api_key = os.getenv "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"
 
 def translate_engloding_to_python(engloding_text):
     prompt = f"Translate this into Python code:\n\n'{engloding_text}'\n\nPython code:"
